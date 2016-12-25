@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Hero",
+  "description": "Become a super hero",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Hero"
+  },
+  "background":
+	{
+		"persistent": false,
+		"scripts": ["background.js"]
+	},
+	"permissions":
+	[
+		"activeTab", 
+		"tabs",
+		"background",
+		"storage",
+		"contextMenus"
+	]
+}
