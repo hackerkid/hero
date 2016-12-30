@@ -1,26 +1,25 @@
 {
   "manifest_version": 2,
-
   "name": "Hero",
   "description": "Become a super hero",
   "version": "1.0",
-
   "browser_action": {
-    "default_icon": "icon.png",
+    "default_icon": "images/icon.png",
     "default_popup": "popup.html",
     "default_title": "Hero"
   },
-  "background":
-	{
-		"persistent": false,
-		"scripts": ["background.js"]
-	},
-	"permissions":
-	[
-		"activeTab", 
-		"tabs",
-		"background",
-		"storage",
-		"contextMenus"
+  "background": {
+    "scripts": ["js/config.js", "js/sites.js", "js/tracker.js", "js/background.js"]
+  },
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "permissions":
+   [	
+      "alarms",
+      "idle",
+      "activeTab", 
+      "tabs",
+      "background",
+      "storage",
+      "contextMenus"
 	]
 }
